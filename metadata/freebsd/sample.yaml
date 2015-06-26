@@ -1,0 +1,30 @@
+{
+  "name":"pear-Horde_Data",
+  "origin":"devel/pear-Horde_Data",
+  "version":"2.1.2",
+  "comment":"Horde Data API",
+  "maintainer":"horde@FreeBSD.org",
+  "www":"http://pear.horde.org",
+  "abi":"FreeBSD:10:amd64",
+  "arch":"freebsd:10:x86:64",
+  "prefix":"/usr/local",
+  "sum":"83d9eed1052983f311eb711a0624e9dcadaa087e53c16f20e221e7453b66a6a3",
+  "flatsize":246508,
+  "path":"All/pear-Horde_Data-2.1.2.txz",
+  "repopath":"All/pear-Horde_Data-2.1.2.txz",
+  "licenselogic":"single",
+  "pkgsize":42212,
+  "desc":"This package provides a data import and export API, with backends for:\n* CSV\n* TSV\n* iCalendar\n* vCard\n* vNote\n* vTodo\n\nWWW: http://pear.horde.org",
+  "deps":{
+    "pear":{"origin":"devel/pear", "version":"1.9.4_3"},
+    "pear-Horde_Browser":{"origin":"www/pear-Horde_Browser", "version":"2.0.9"},
+    "pear-Horde_Exception":{"origin":"devel/pear-Horde_Exception", "version":"2.0.5"},
+    "pear-Horde_Icalendar":{"origin":"devel/pear-Horde_Icalendar", "version":"2.0.11"},
+    "pear-Horde_Mail":{"origin":"mail/pear-Horde_Mail", "version":"2.6.0_1"},
+    "pear-Horde_Mime":{"origin":"mail/pear-Horde_Mime", "version":"2.9.0"},
+    "pear-Horde_Translation":{"origin":"devel/pear-Horde_Translation", "version":"2.2.0"},
+    "pear-Horde_Util":{"origin":"devel/pear-Horde_Util", "version":"2.5.5"},
+    "pear-channel-horde":{"origin":"devel/pear-channel-horde", "version":"20120210"}},
+  "categories":["devel", "www", "pear"]
+}
+
