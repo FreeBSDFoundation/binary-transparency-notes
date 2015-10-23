@@ -1,0 +1,6 @@
+Archive: stable
+Origin: Debian
+Label: Debian
+Version: 8.2
+Component: main
+Architecture: amd64
