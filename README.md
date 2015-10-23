@@ -22,6 +22,10 @@ http://ftp.us.debian.org/debian -- these are the files that would be
 needed by a pure debian stable machine on the amd64 (x86_64) platform,
 using an en_US locale.
 
+The files named `*.sample` are short examples extracted from larger
+files for easier comparison.
+
+
 ### `Release` and `Release.gpg`
    
 `Release` identifies the metadata for all platforms for a given
