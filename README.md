@@ -5,6 +5,12 @@ to the Binary Artifact Transparency project.
 
 # Repository Directory Structure
 
+## authorities
+
+Sample cryptographic authorities from current versions of different
+software distributors.  These files are represented as OpenPGP
+certificates, X.509-style raw public keys, etc.
+
 ## metadata
 
 Sample package metadata from various operating systems.
@@ -56,3 +62,7 @@ distributed to this architecture specifically.
 Same as the `main/binary-amd64/Packages.xz` but used for packages that
 are architecture-independent (e.g. consisting only of scripts,
 platform-indepenent data, documentation)
+
+### `cdimage/SHA*SUM` and `cdimage/SHA*SUM.sign`
+
+These are signatures over lists of digests of installer CD images.

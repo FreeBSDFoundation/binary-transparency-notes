@@ -1,0 +1,12 @@
+Debian Cryptographic Authorities
+--------------------------------
+
+Debian CD signing keys come from https://www.debian.org/CD/verify
+
+I've only included the active stable CD signing key here.
+
+I'm also only including signing keys from the current debian stable
+distribution (jessie) and its security updates.
+
+In the future, we'll want to include debian unstable, testing,
+oldstable, etc.

@@ -1,0 +1,64 @@
+Notes about Debian package signing infrastructure
+=================================================
+
+There are two things signed by commonly-relied-upon cryptographic
+authorities within debian:
+
+ * installer ISOs (CD images)
+ * APT archives
+
+
+CD images
+---------
+
+The Installer ISOs can be found here:
+
+  https://www.debian.org/releases/jessie/debian-installer/
+
+For a given release, you can find them here:
+
+  http://cdimage.debian.org/debian-cd/8.2.0/amd64/iso-cd/
+
+The authority signs several files that each contain cryptographic
+digests of a specific release.  You can find examples of these files
+in metadata/debian/cdimage/.
+
+So each signature signs off on a set of images.  the images themselves
+are identified only by their file names, like
+debian-8.2.0-amd64-netinst.iso or debian-8.2.0-amd64-CD-9.iso.  This
+can be broken out into $distro-$version-$architecture-$cdtype.iso.
+
+APT archives
+------------
+
+(see overview in README.md)
+
+There are multiple cryptographic signatures over a top-level Release
+file, found in a single Release.gpg.
+
+These signatures come may from online signing keys or from offline
+signing keys, and any key can sign any Release file (if you have
+multiple repository sources, there is no binding between them).
+
+Weirdnesses
+-----------
+
+ * There is no common or automated CD Image verification step that i'm
+   aware of, and the message signatures aren't linked directly from
+   the visible download page.  Most folks probably never verify their
+   CD images.
+
+ * APT doesn't let the user require a certain key or set of keys to be
+   used with a certain source.  All keys can create valid signatures
+   for all sources.
+
+ * APT signature verification is weakest-link.  If only one signature
+   shows up correct, then the file is accepted as legitimate.
+
+ * it's not clear how timing information works: signatures have
+   timestamps, but Release also has a Date: field.  Does APT reject
+   updates that are older than its most recent fetch?
+
+ * It's not clear what benefit some of the authorities are.  why do we
+   need both the jessie-release-key and the jessie-automatic-key, for
+   example?
