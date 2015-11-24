@@ -1,0 +1,9 @@
+version = 1;
+packing_format = "txz";
+digest_format = "sha256_base32";
+digests = "digests";
+manifests = "packagesite.yaml";
+filesite = "filesite.yaml";
+digests_archive = "digests";
+manifests_archive = "packagesite";
+filesite_archive = "filesite";
