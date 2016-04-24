@@ -43,7 +43,7 @@ Archive Signing Key is invoked.
 ### `main/Contents-amd64.gz`
 
 this provides a list of all the files installed by any package in the
-repository (seful for things like "file not found").  I don't think
+repository (useful for things like "file not found").  I don't think
 anything in this file needs to be logged for binary transparency.
 
 ### `main/binary-amd64/Release` and `main/binary-all/Release`
